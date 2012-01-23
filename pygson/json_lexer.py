@@ -26,6 +26,7 @@ class JSONLexer(RegexLexer):
         'simplevalue':[
             (r'(true|false|null)\b', Token.Keyword.Constant),
             (r'-?[0-9]+', Token.Number.Integer),
+            (r'(\d+\.\d*|\.\d+|\d+)', Token.Number.Float),
             (r'"(\\\\|\\"|[^"])*"', Token.String.Double),
         ],
 
@@ -70,4 +71,4 @@ class JSONLexer(RegexLexer):
         ],
 
     }
-    
+
